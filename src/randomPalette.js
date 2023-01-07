@@ -2,6 +2,7 @@ import Color, { getLuminance } from "./Color";
 
 
 const allPalettes = [
+    ["#000", "#fff"],
     ["#888c6c", "#a67244", "#402110", "#8c2016", "#590a0a"],
     ["#bf656d", "#732944", "#a67665", "#d9a796", "#8c5042"],
     ["#565bbf", "#071526", "#d6d98b", "#d9984a", "#d99873"],
@@ -147,7 +148,7 @@ export default function randomPalette(rnd = Math.random(), filter) {
     return all[0 | rnd * all.length]
 }
 
-export function randomPaletteWithBlack(rnd = Math.random(), filter, minLuminance = 1600) {
+export function randomPaletteWithBlack(rnd = Math.random(), filter, minLuminance = 1200) {
     let palette = randomPalette(rnd, filter);
 
     let min = Infinity
